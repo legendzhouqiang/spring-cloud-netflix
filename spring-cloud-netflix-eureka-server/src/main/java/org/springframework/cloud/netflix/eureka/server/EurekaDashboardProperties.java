@@ -21,6 +21,8 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
+ *
+ * EurekaDashBoardProperties 配置类
  * Configuration properties for the Eureka dashboard (UI).
  *
  * @author Dave Syer

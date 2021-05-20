@@ -26,7 +26,9 @@ import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.StringUtils;
 
 /**
+ * 注册 RibbonClients
  * @author Dave Syer
+ *
  */
 public class RibbonClientConfigurationRegistrar implements ImportBeanDefinitionRegistrar {
 

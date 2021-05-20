@@ -38,6 +38,8 @@ import com.netflix.client.http.HttpRequest;
 /**
  * Auto configuration for Ribbon (client side load balancing).
  *
+ * @Configuration
+ *
  * @author Spencer Gibb
  * @author Dave Syer
  */

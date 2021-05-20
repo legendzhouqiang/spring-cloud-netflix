@@ -108,6 +108,8 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 		return this.clientFactory.getLoadBalancer(serviceId);
 	}
 
+	
+	
 	protected static class RibbonServer implements ServiceInstance {
 		private String serviceId;
 		private Server server;

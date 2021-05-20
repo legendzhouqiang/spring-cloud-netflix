@@ -152,6 +152,9 @@ public class EurekaServerInitializerConfiguration implements ServletContextAware
 							catch (IOException ex) {
 								// ignore
 							}
+							
+							
+							
 							LoggingConfiguration.getInstance().configure();
 							EurekaServerConfigurationManager
 									.getInstance()

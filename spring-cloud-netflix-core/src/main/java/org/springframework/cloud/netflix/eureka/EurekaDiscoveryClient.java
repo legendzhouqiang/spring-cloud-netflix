@@ -44,12 +44,20 @@ public class EurekaDiscoveryClient implements DiscoveryClient {
 
 	@Autowired
 	private com.netflix.discovery.DiscoveryClient discovery;
-
+	
+	/**
+	 * 获取描述
+	 * @return
+	 */
 	@Override
 	public String description() {
 		return DESCRIPTION;
 	}
-
+	
+	/**
+	 * 获取本地服务实例
+	 * @return
+	 */
 	@Override
 	public ServiceInstance getLocalServiceInstance() {
 		return new ServiceInstance() {
@@ -79,7 +87,12 @@ public class EurekaDiscoveryClient implements DiscoveryClient {
 			}
 		};
 	}
-
+	
+	/**
+	 * 通过服务 ID，获取当前服务的服务实例
+	 * @param serviceId
+	 * @return
+	 */
 	@Override
 	public List<ServiceInstance> getInstances(String serviceId) {
 		List<InstanceInfo> infos = this.discovery.getInstancesByVipAddress(serviceId,
@@ -127,7 +140,11 @@ public class EurekaDiscoveryClient implements DiscoveryClient {
 			return DefaultServiceInstance.getUri(this);
 		}
 	}
-
+	
+	/**
+	 *  获取所有服务 ID 列表
+	 * @return
+	 */
 	@Override
 	public List<String> getServices() {
 		Applications applications = this.discovery.getApplications();

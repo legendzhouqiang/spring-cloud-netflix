@@ -37,6 +37,9 @@ import com.netflix.loadbalancer.ServerListFilter;
  * @author Dave Syer
  */
 @Configuration
+/**
+ *  引入 RibbonClientConfigurationRegistrar
+ */
 @Import(RibbonClientConfigurationRegistrar.class)
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

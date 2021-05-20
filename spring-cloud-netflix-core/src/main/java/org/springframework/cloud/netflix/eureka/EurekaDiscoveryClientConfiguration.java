@@ -61,7 +61,14 @@ import com.netflix.discovery.shared.EurekaJerseyClient;
  * @author Dave Syer
  */
 @Configuration
+/**
+ * 为带有@ConfigurationProperties注解的Bean提供有效的支持
+ */
 @EnableConfigurationProperties
+
+/**
+ * EurekaClientConfig 在classpath中才会实例化
+ */
 @ConditionalOnClass(EurekaClientConfig.class)
 @ConditionalOnProperty(value = "eureka.client.enabled", matchIfMissing = true)
 @CommonsLog
